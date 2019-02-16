@@ -27,6 +27,8 @@ app.get('/', (req, res) => res.send('Hello World!'))
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
+app.use(express.static("html"));
+
 // Creates a reservation
 app.get("/reserve", function(req, res) {
     let cName = req.body.cName;
