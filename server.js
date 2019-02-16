@@ -1,6 +1,8 @@
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require('express');
+const app = express();
+const port = 3000;
+
+const path = require("path");
 
 // let reservations = [
 //     {routeName: "reservations",
@@ -23,9 +25,12 @@ function Customer(cName, cPhone, cEmail, cId) {
 // Post = Create
 // Put = Update
 
-app.get('/', (req, res) => res.send('Hello World!'))
+app.get('/', (req, res) => res.sendFile(path.join(__dirname + "/html/index.html")));
+app.get('/home', (req, res) => res.sendFile(path.join(__dirname + "/html/index.html")));
+app.get('/reservation/make', (req, res) => res.sendFile(path.join(__dirname + "/html/reserve.html")));
+app.get('/home', (req, res) => res.sendFile(path.join(__dirname + "/html/iew.html")));
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 app.use(express.static("html"));
 
