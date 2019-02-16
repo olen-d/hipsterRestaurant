@@ -31,10 +31,10 @@ app.use(express.static("html"));
 
 // Creates a reservation
 app.get("/reserve", function(req, res) {
-    let cName = req.body.cName;
-    let cPhone = req.body.cPhone;
-    let cEmail = req.body.cEmail;
-    let cId = req.body.cId;
+    let cName = req.body.name;
+    let cPhone = req.body.phone-number;
+    let cEmail = req.body.exampleEmailInput;
+    let cId = req.body.unique-id;
     let customer = Customer(cName, cPhone, cEmail, cId);
     return res.json(customer);
   });
