@@ -35,7 +35,8 @@ app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 app.use(express.static("html"));
 
 // Creates a reservation
-app.get("/reserve", function (req, res) {
+app.post("/reserve", function (req, res) {
+  console.log("====",req.body);
   let cName = req.body.name;
   let cPhone = req.body.phone - number;
   let cEmail = req.body.exampleEmailInput;
