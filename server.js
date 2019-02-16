@@ -14,11 +14,11 @@ const port = 3000
 
 // Constructor to make the customer
 
-function Customer (cName, cPhone, cEmail, cId) {
-    this.cName = cName;
-    this.cPhone = cPhone;
-    this.cEmail = cEmail;
-    this.cId = cId;
+function Customer(cName, cPhone, cEmail, cId) {
+  this.cName = cName;
+  this.cPhone = cPhone;
+  this.cEmail = cEmail;
+  this.cId = cId;
 }
 // Post = Create
 // Put = Update
@@ -30,14 +30,14 @@ app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 app.use(express.static("html"));
 
 // Creates a reservation
-app.get("/reserve", function(req, res) {
-    let cName = req.body.name;
-    let cPhone = req.body.phone-number;
-    let cEmail = req.body.exampleEmailInput;
-    let cId = req.body.unique-id;
-    let customer = Customer(cName, cPhone, cEmail, cId);
-    return res.json(customer);
-  });
+app.get("/reserve", function (req, res) {
+  let cName = req.body.name;
+  let cPhone = req.body.phone - number;
+  let cEmail = req.body.exampleEmailInput;
+  let cId = req.body.unique - id;
+  let customer = new Customer(cName, cPhone, cEmail, cId);
+  return res.json(customer);
+});
 
 // // Displays all reservations
 // app.get("/api/reservations", function(req, res) {
