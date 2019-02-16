@@ -1,0 +1,24 @@
+{
+  "name": "hipsterRestaurant",
+  "version": "1.0.0",
+  "description": "We only have five tables.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olen-d/hipsterRestaurant.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olen-d/hipsterRestaurant/issues"
+  },
+  "homepage": "https://github.com/olen-d/hipsterRestaurant#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
